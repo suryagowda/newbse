@@ -1,6 +1,6 @@
 // Function to fetch top 10 stocks
 async function getTopStocks() {
-    const response = await fetch('http://nonstop-pond-sprint.glitch.me/top10stocks');
+    const response = await fetch('https://nonstop-pond-sprint.glitch.me/top10stocks');
     const data = await response.json();
     const topStocksList = document.getElementById('topStocksList');
 
@@ -39,7 +39,7 @@ const formattedDateInput = day + month + year;
 
 console.log(formattedDateInput);
 
-const response = await fetch('http://nonstop-pond-sprint.glitch.me/processEquityBhavcopy', {
+const response = await fetch('https://nonstop-pond-sprint.glitch.me/processEquityBhavcopy', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function showAlert(message, alertType) {
 // Function to search stocks by name
 async function searchStocks() {
     const stockName = document.getElementById('stockNameInput').value;
-    const response = await fetch(`http://nonstop-pond-sprint.glitch.me/stocks/${stockName}`);
+    const response = await fetch(`https://nonstop-pond-sprint.glitch.me/stocks/${stockName}`);
     const data = await response.json();
     const searchResults = document.getElementById('searchResults');
 
@@ -91,7 +91,7 @@ async function addToFavorites() {
         return;
     }
 
-    const response = await fetch('http://nonstop-pond-sprint.glitch.me/addtofavorites', {
+    const response = await fetch('https://nonstop-pond-sprint.glitch.me/addtofavorites', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ async function addToFavorites() {
 
 // Function to fetch and display favorite stocks
 async function getFavoriteStocks() {
-    const response = await fetch('http://nonstop-pond-sprint.glitch.me/favoritestocks');
+    const response = await fetch('https://nonstop-pond-sprint.glitch.me/favoritestocks');
     const data = await response.json();
     const favoriteStocksList = document.getElementById('favoriteStocksList');
 
@@ -131,7 +131,7 @@ async function removeFromFavorites() {
         return;
     }
 
-    const response = await fetch(`http://nonstop-pond-sprint.glitch.me/removefromfavorites/${codeInput}`, {
+    const response = await fetch(`https://nonstop-pond-sprint.glitch.me/removefromfavorites/${codeInput}`, {
         method: 'DELETE',
     });
 
