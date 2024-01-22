@@ -1,3 +1,8 @@
+## Behind The Scenes:
+   ![DataFlow Diagram](/DataFLow.png)
+
+### To see the live project, click [here](https://newbse.vercel.app/)
+
 # Stocks Dashboard
 
 This project is a Stocks Dashboard to communicate with server to send and fetch information from server.This website helps the user to get details about trades on any past date utilizing bhavcopy which BSE india provides. 
